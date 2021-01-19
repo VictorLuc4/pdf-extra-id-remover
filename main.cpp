@@ -28,7 +28,6 @@ int main(int ac, char** av)
 	checkHelp(ac);
   	
   	Remover remover;
-  	remover.setFilenamesFromDirectory();
   	remover.eraseIDAndReplaceFiles();
 
 	return 0;

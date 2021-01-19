@@ -18,7 +18,6 @@ class Remover {
 public:
 	Remover();
 	virtual	~Remover();
-	virtual void setFilenamesFromDirectory();
 	virtual void eraseIDAndReplaceFiles();
 
 	/* Setters ans getters */

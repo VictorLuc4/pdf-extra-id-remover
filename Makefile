@@ -4,25 +4,29 @@
 ## 
 ##
 
+CC			=		g++ -o
+
+RM 			=		rm -f
+
 SRC			=		main.cpp 	\
 					remover.cpp 
 
 OBJ			=		$(SRC:.cpp=.o)
 
-NAME		=		mid_remover.tor4
+NAME		=		mid_remover
 
 CPPFLAGS 	=		-Wall -Wextra -Werror
 
 all:		$(NAME)
 
 $(NAME):	$(OBJ)
-			g++ -o $(NAME) $(OBJ) $(CPPFLAGS)
+			$(CC) $(NAME) $(OBJ) $(CPPFLAGS)
 
 clean:		
-			rm -f $(OBJ)
+			$(RM) $(OBJ)
 
 fclean:		clean
-			rm -f $(NAME)
+			$(RM) $(NAME)
 
 re:			clean fclean all
 

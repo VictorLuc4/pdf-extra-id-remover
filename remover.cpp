@@ -8,22 +8,20 @@
 
 Remover::Remover()
 {
-}
-
-Remover::~Remover()
-{
-}
-
-void Remover::setFilenamesFromDirectory()
-{
+	/* Creating a list of file names */
+	
 	DIR *dir;
   	struct dirent *ent;
   	if ((dir = opendir (".")) != NULL) {
 	    while ((ent = readdir (dir)) != NULL) {
 	      	this->filenames.push_back(ent->d_name);	
 	    }
-	    closedir (dir);
-	  }	
+		closedir (dir);
+	}
+}
+
+Remover::~Remover()
+{
 }
 
 void Remover::eraseIDAndReplaceFiles()
@@ -43,7 +41,7 @@ void Remover::eraseIDAndReplaceFiles()
 	}
 }
 
-	/* Setters ans getters */
+/* Setters ans getters */
 void Remover::setFilenames(vector<string> filenames)
 {
 	this->filenames = filenames;
